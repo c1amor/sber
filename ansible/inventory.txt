@@ -1,0 +1,8 @@
+[docker_centos7]
+docker-centos7  ansible_host=172.17.0.2
+
+[docker_centos7:vars]
+ansible_connection             = ssh
+ansible_ssh_port               = 22
+ansible_ssh_user               = root
+ansible_ssh_pass               = root

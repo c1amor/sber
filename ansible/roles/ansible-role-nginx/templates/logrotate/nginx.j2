@@ -1,0 +1,11 @@
+{% for path in nginx_logrotate_conf.paths %}
+{{ path }}
+{% endfor %}
+{
+{% for option in nginx_logrotate_conf.options %}
+    {{ option }}
+{% endfor %}
+    postrotate
+    nginx -s reopen
+    endscript
+}
